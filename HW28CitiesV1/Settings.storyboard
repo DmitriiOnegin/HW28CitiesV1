@@ -118,7 +118,7 @@
         <!--Settings-->
         <scene sceneID="yFV-Qu-mlu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yEP-HO-Jiu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SettingsVC" automaticallyAdjustsScrollViewInsets="NO" id="yEP-HO-Jiu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="square.and.arrow.up" catalog="system" id="NiK-1o-laa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qAZ-jO-bC4">
@@ -132,7 +132,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMm-5A-vUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10489" y="527"/>
+            <point key="canvasLocation" x="-10491" y="525"/>
         </scene>
     </scenes>
     <resources>
