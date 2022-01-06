@@ -8,10 +8,13 @@
 import Foundation
 
 
-struct City {
+struct City: Comparable {
     var usersCity: String
     var userName: String
 
+    static func < (lhs: City, rhs: City) -> Bool {
+        lhs.usersCity < rhs.usersCity
+        }
 }
 extension City {
     static func returnCityesArray() -> [City] {
@@ -26,7 +29,7 @@ extension City {
             userName: names[index])
             cityesArray.append(city)
         }
-    return cityesArray
+        return cityesArray.sorted(by: <)
         
     }
     
