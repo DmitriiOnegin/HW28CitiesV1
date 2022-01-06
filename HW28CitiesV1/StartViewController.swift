@@ -14,7 +14,6 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
     
     var cityesArray = City.returnCityesArray()
     var сitiesArraySorting = City.returnCityesArray()
-    var text1 = "aaabbbссс"
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewOutlet.dataSource = self
@@ -30,11 +29,10 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         var sortedArray: [City] = []
         for index in 0..<cityesArray.count {
             let city = cityesArray[index]
-            
-            guard city.usersCity.lowercased().contains(text.lowercased()) || city.userName.lowercased().hasPrefix(text.lowercased()) else {continue}
+            guard city.usersCity.lowercased().contains(text.lowercased()) || city.userName.lowercased().contains(text.lowercased()) else {continue}
             sortedArray.append(city)
         }
-        guard !sortedArray.isEmpty else {return cityesArray}
+        guard !sortedArray.isEmpty else {return []}
         return sortedArray
     }
     
@@ -81,7 +79,6 @@ extension StartViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         сitiesArraySorting.count
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
