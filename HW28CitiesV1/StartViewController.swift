@@ -36,24 +36,15 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         return sortedArray
     }
     
+    
+    
     //MARK: -  автоматическое обновление таблице при вводе поискового запроса
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         сitiesArraySorting = sortedArrayOfCities(searchText: searchText)
         tableViewOutlet.reloadData()
     }
-    //MARK: - кнопка "Cancel"
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        self.searchBar.showsCancelButton = true
-    }
+ 
 
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.showsCancelButton = false
-        searchBar.text = ""
-        searchBar.resignFirstResponder()
-        сitiesArraySorting = cityesArray
-        tableViewOutlet.reloadData()
-    }
-    
     //MARK: - скрывает клавиатуру по кнопке Done
         func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
             searchBar.resignFirstResponder()
@@ -67,7 +58,7 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
     
     //MARK: - navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let mainVC = segue.destination as? MainViewController else {return}
+        guard let mainVC = segue.destination as? CityViewController else {return}
         guard let indexPath = tableViewOutlet.indexPathForSelectedRow?.row else {return}
         let city = сitiesArraySorting[indexPath]
         mainVC.city = city
@@ -81,6 +72,8 @@ extension StartViewController : UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        //tableView.cellForRow(at: indexPath)?.backgroundColor = UIColor.systemRed
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -89,6 +82,7 @@ extension StartViewController : UITableViewDataSource, UITableViewDelegate {
         var content = cell.defaultContentConfiguration()
         content.text = city.usersCity
         content.secondaryText = city.userName
+        cell.backgroundColor = UIColor.systemGray4
         cell.contentConfiguration = content
         return cell
     }
