@@ -20,6 +20,7 @@
 		192CD9B42787376D0084E0C1 /* MainCopy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192CD9B32787376D0084E0C1 /* MainCopy.storyboard */; };
 		192CD9B6278738BC0084E0C1 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192CD9B5278738BC0084E0C1 /* Start.storyboard */; };
 		192CD9B8278738CA0084E0C1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192CD9B7278738CA0084E0C1 /* Settings.storyboard */; };
+		192CD9BA27874EDF0084E0C1 /* City.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192CD9B927874EDF0084E0C1 /* City.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		192CD9B32787376D0084E0C1 /* MainCopy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainCopy.storyboard; sourceTree = "<group>"; };
 		192CD9B5278738BC0084E0C1 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
 		192CD9B7278738CA0084E0C1 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		192CD9B927874EDF0084E0C1 /* City.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = City.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				192CD9AB2786F8DF0084E0C1 /* SettingsViewController.swift */,
 				192CD997278607580084E0C1 /* Main.storyboard */,
 				192CD9B5278738BC0084E0C1 /* Start.storyboard */,
+				192CD9B927874EDF0084E0C1 /* City.storyboard */,
 				192CD9B7278738CA0084E0C1 /* Settings.storyboard */,
 				192CD9B32787376D0084E0C1 /* MainCopy.storyboard */,
 				192CD99A2786075B0084E0C1 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 				192CD99E2786075B0084E0C1 /* LaunchScreen.storyboard in Resources */,
 				192CD99B2786075B0084E0C1 /* Assets.xcassets in Resources */,
 				192CD9B6278738BC0084E0C1 /* Start.storyboard in Resources */,
+				192CD9BA27874EDF0084E0C1 /* City.storyboard in Resources */,
 				192CD9B8278738CA0084E0C1 /* Settings.storyboard in Resources */,
 				192CD9B42787376D0084E0C1 /* MainCopy.storyboard in Resources */,
 				192CD999278607580084E0C1 /* Main.storyboard in Resources */,

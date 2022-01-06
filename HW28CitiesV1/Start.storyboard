@@ -30,7 +30,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="yTk-lc-00a" kind="show" id="ysV-iH-QX2"/>
+                                    <segue destination="WQK-UT-kuV" kind="show" id="Q6j-1i-C9L"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -44,6 +44,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3K-7B-LA7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3586.9565217391305" y="82.366071428571431"/>
+        </scene>
+        <!--CityVC-->
+        <scene sceneID="cCg-U0-Er3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="City" referencedIdentifier="CityVC" id="WQK-UT-kuV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yjS-8S-8LI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDr-Sv-1qj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4111" y="82"/>
         </scene>
         <!--City View Controller-->
         <scene sceneID="8wR-ak-uEM">
@@ -108,14 +118,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="irx-v7-tS1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4368.115942028986" y="81.696428571428569"/>
+            <point key="canvasLocation" x="4928" y="82"/>
         </scene>
         <!--Place View Controller-->
         <scene sceneID="heT-D2-I8g">
             <objects>
                 <viewController id="4Dy-ac-BQE" customClass="PlaceViewController" customModule="HW28CitiesV1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gOd-6e-2RI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cce-Di-hIF">
@@ -144,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wk5-cl-URh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5162.3188405797109" y="81.696428571428569"/>
+            <point key="canvasLocation" x="5722" y="82"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f1m-IL-mzQ">
