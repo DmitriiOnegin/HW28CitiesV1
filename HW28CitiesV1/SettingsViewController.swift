@@ -25,7 +25,9 @@ class SettingsViewController: UIViewController {
     @IBAction func theatersSwitchAction() {
         // если свич выкл, то удаляем театры из массива, элсе иф свич вкл, то добавляем в массив театры
     }
-
+//сделать экшн один вместо пяти
+    //сделать массив с категориями
+    //сделать лейбл и передать в него данные со свичей
     @IBAction func sportSwitchAction() {
     }
     
