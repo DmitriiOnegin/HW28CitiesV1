@@ -17,6 +17,7 @@
 		192CD9AC2786F8DF0084E0C1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CD9AB2786F8DF0084E0C1 /* SettingsViewController.swift */; };
 		192CD9AE2786F92F0084E0C1 /* TownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CD9AD2786F92F0084E0C1 /* TownViewController.swift */; };
 		192CD9B02786F9490084E0C1 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CD9AF2786F9490084E0C1 /* PlaceViewController.swift */; };
+		192CD9B2278733080084E0C1 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CD9B1278733070084E0C1 /* CityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		192CD9AB2786F8DF0084E0C1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		192CD9AD2786F92F0084E0C1 /* TownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownViewController.swift; sourceTree = "<group>"; };
 		192CD9AF2786F9490084E0C1 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
+		192CD9B1278733070084E0C1 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				192CD9A72786F7FA0084E0C1 /* TabBarViewController.swift */,
 				192CD9A92786F8B80084E0C1 /* StartViewController.swift */,
 				192CD9AD2786F92F0084E0C1 /* TownViewController.swift */,
+				192CD9B1278733070084E0C1 /* CityViewController.swift */,
 				192CD9AF2786F9490084E0C1 /* PlaceViewController.swift */,
 				192CD9AB2786F8DF0084E0C1 /* SettingsViewController.swift */,
 				192CD997278607580084E0C1 /* Main.storyboard */,
@@ -153,6 +156,7 @@
 				192CD9B02786F9490084E0C1 /* PlaceViewController.swift in Sources */,
 				192CD9AA2786F8B80084E0C1 /* StartViewController.swift in Sources */,
 				192CD9A82786F7FA0084E0C1 /* TabBarViewController.swift in Sources */,
+				192CD9B2278733080084E0C1 /* CityViewController.swift in Sources */,
 				192CD992278607580084E0C1 /* AppDelegate.swift in Sources */,
 				192CD994278607580084E0C1 /* SceneDelegate.swift in Sources */,
 				192CD9AE2786F92F0084E0C1 /* TownViewController.swift in Sources */,
