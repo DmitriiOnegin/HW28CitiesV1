@@ -10,7 +10,7 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     var delegate: SettingsViewControllerDelegate!
-    private var categirys: [Categora] = [.theatre, .sport, .architecture]
+    private var categirys: [Categora] = [.theatre, .sport, .architecture, .food, .park]
     
     
     @IBOutlet weak var parksSwitch: UISwitch!
@@ -32,6 +32,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         testLabel.text = sights.joined(separator: ", ")
+        delegate.setNewValues(for: categirys)
     }
 
     // по умолчанию все свичи включены и все достопримечательности открыты
