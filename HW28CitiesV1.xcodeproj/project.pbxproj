@@ -22,6 +22,9 @@
 		192CD9B8278738CA0084E0C1 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192CD9B7278738CA0084E0C1 /* Settings.storyboard */; };
 		192CD9BA27874EDF0084E0C1 /* City.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192CD9B927874EDF0084E0C1 /* City.storyboard */; };
 		192CD9BC2788264C0084E0C1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CD9BB2788264C0084E0C1 /* DataManager.swift */; };
+		192CD9BE278841FB0084E0C1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CD9BD278841FA0084E0C1 /* Category.swift */; };
+		192CD9C0278842E60084E0C1 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CD9BF278842E60084E0C1 /* CityModel.swift */; };
+		192CD9C6278843DA0084E0C1 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CD9C5278843D90084E0C1 /* PlaceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		192CD9B7278738CA0084E0C1 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		192CD9B927874EDF0084E0C1 /* City.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = City.storyboard; sourceTree = "<group>"; };
 		192CD9BB2788264C0084E0C1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		192CD9BD278841FA0084E0C1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		192CD9BF278842E60084E0C1 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		192CD9C5278843D90084E0C1 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,9 @@
 				192CD9AF2786F9490084E0C1 /* PlaceViewController.swift */,
 				192CD9AB2786F8DF0084E0C1 /* SettingsViewController.swift */,
 				192CD9BB2788264C0084E0C1 /* DataManager.swift */,
+				192CD9BD278841FA0084E0C1 /* Category.swift */,
+				192CD9BF278842E60084E0C1 /* CityModel.swift */,
+				192CD9C5278843D90084E0C1 /* PlaceModel.swift */,
 				192CD997278607580084E0C1 /* Main.storyboard */,
 				192CD9B5278738BC0084E0C1 /* Start.storyboard */,
 				192CD9B927874EDF0084E0C1 /* City.storyboard */,
@@ -169,11 +178,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192CD9C0278842E60084E0C1 /* CityModel.swift in Sources */,
 				192CD9B02786F9490084E0C1 /* PlaceViewController.swift in Sources */,
 				192CD9BC2788264C0084E0C1 /* DataManager.swift in Sources */,
 				192CD9AA2786F8B80084E0C1 /* StartViewController.swift in Sources */,
 				192CD9A82786F7FA0084E0C1 /* TabBarViewController.swift in Sources */,
 				192CD9B2278733080084E0C1 /* CityViewController.swift in Sources */,
+				192CD9BE278841FB0084E0C1 /* Category.swift in Sources */,
+				192CD9C6278843DA0084E0C1 /* PlaceModel.swift in Sources */,
 				192CD992278607580084E0C1 /* AppDelegate.swift in Sources */,
 				192CD994278607580084E0C1 /* SceneDelegate.swift in Sources */,
 				192CD9AC2786F8DF0084E0C1 /* SettingsViewController.swift in Sources */,
