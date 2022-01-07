@@ -35,6 +35,19 @@ class SettingsViewController: UIViewController {
 
     @IBAction func switchAction() {
         sights.removeAll()
+        
+        
+//        switch UISwitch().isOn {
+//        case theatersSwitch.isOn:
+//            guard let theaters = theatersLabel.text else { return }
+//            sights.append(theaters)
+//        case sportSwitch.isOn:
+//            guard let sport = sportLabel.text else { return }
+//            sights.append(sport)
+//
+//        default:
+//            break
+//        }
         if theatersSwitch.isOn {
             guard let theaters = theatersLabel.text else { return }
             sights.append(theaters)
@@ -72,3 +85,4 @@ class SettingsViewController: UIViewController {
 //    } else if let navigationVC = viewController as? UINavigationController {
 //        let _VC = navigationVC.topViewController as! _
 //        code
+
