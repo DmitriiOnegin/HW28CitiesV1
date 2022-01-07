@@ -13,8 +13,8 @@
 		192CD999278607580084E0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192CD997278607580084E0C1 /* Main.storyboard */; };
 		192CD99B2786075B0084E0C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 192CD99A2786075B0084E0C1 /* Assets.xcassets */; };
 		192CD99E2786075B0084E0C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192CD99C2786075B0084E0C1 /* LaunchScreen.storyboard */; };
-		9F377D3C27862BAE002343C9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F377D3B27862BAE002343C9 /* Model.swift */; };
-		9F377D3E27862BDE002343C9 /* CityViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F377D3D27862BDE002343C9 /* CityViewContoller.swift */; };
+		9F76121B2788831F000A29FB /* CityViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76121A2788831F000A29FB /* CityViewContoller.swift */; };
+		9F76121D278883D9000A29FB /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F76121C278883D9000A29FB /* CityModel.swift */; };
 		9F99C05E2788449400E3AA82 /* City.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F99C05D2788449400E3AA82 /* City.storyboard */; };
 		9FA0EF3A278735600024CFAC /* SightsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0EF39278735600024CFAC /* SightsModel.swift */; };
 /* End PBXBuildFile section */
@@ -28,8 +28,8 @@
 		192CD99A2786075B0084E0C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		192CD99D2786075B0084E0C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		192CD99F2786075B0084E0C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F377D3B27862BAE002343C9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = "../../../Desktop/City Guide (HW)/Model.swift"; sourceTree = "<group>"; };
-		9F377D3D27862BDE002343C9 /* CityViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityViewContoller.swift; path = "../../../Desktop/City Guide (HW)/ViewControllers/CityViewContoller.swift"; sourceTree = "<group>"; };
+		9F76121A2788831F000A29FB /* CityViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityViewContoller.swift; path = "../../../../Desktop/City Guide (HW)/ViewControllers/CityViewContoller.swift"; sourceTree = "<group>"; };
+		9F76121C278883D9000A29FB /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		9F99C05D2788449400E3AA82 /* City.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = City.storyboard; sourceTree = "<group>"; };
 		9FA0EF39278735600024CFAC /* SightsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SightsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,9 +64,9 @@
 		192CD990278607580084E0C1 /* HW28CitiesV1 */ = {
 			isa = PBXGroup;
 			children = (
-				9F377D3B27862BAE002343C9 /* Model.swift */,
+				9F76121A2788831F000A29FB /* CityViewContoller.swift */,
+				9F76121C278883D9000A29FB /* CityModel.swift */,
 				9FA0EF39278735600024CFAC /* SightsModel.swift */,
-				9F377D3D27862BDE002343C9 /* CityViewContoller.swift */,
 				192CD991278607580084E0C1 /* AppDelegate.swift */,
 				192CD993278607580084E0C1 /* SceneDelegate.swift */,
 				192CD995278607580084E0C1 /* ViewController.swift */,
@@ -153,10 +153,10 @@
 			files = (
 				192CD996278607580084E0C1 /* ViewController.swift in Sources */,
 				9FA0EF3A278735600024CFAC /* SightsModel.swift in Sources */,
-				9F377D3E27862BDE002343C9 /* CityViewContoller.swift in Sources */,
+				9F76121D278883D9000A29FB /* CityModel.swift in Sources */,
+				9F76121B2788831F000A29FB /* CityViewContoller.swift in Sources */,
 				192CD992278607580084E0C1 /* AppDelegate.swift in Sources */,
 				192CD994278607580084E0C1 /* SceneDelegate.swift in Sources */,
-				9F377D3C27862BAE002343C9 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
