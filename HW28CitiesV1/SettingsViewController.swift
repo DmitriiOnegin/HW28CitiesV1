@@ -9,36 +9,52 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var parksSwitch: UISwitch!
+    @IBOutlet weak var foodSwitch: UISwitch!
+    @IBOutlet weak var architectureSwitch: UISwitch!
+    @IBOutlet weak var sportSwitch: UISwitch!
+    @IBOutlet weak var theatersSwitch: UISwitch!
     @IBOutlet weak var theatersLabel: UILabel!
     @IBOutlet weak var sportLabel: UILabel!
     @IBOutlet weak var parksLabel: UILabel!
-    @IBOutlet weak var aarchitectureLabel: UILabel!
+    @IBOutlet weak var architectureLabel: UILabel!
     @IBOutlet weak var foodLabel: UILabel!
+    @IBOutlet weak var testLabel: UILabel!
     
+
+    var sights = ["Театры", "Спорт", "Архитектура", "Еда", "Парки"]
     // тут делаем экземпляр структуры из модели
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        testLabel.text = sights.joined(separator: ", ")
     }
 
     // по умолчанию все свичи включены и все достопримечательности открыты
-    @IBAction func theatersSwitchAction() {
-        // если свич выкл, то удаляем театры из массива, элсе иф свич вкл, то добавляем в массив театры
-    }
-//сделать экшн один вместо пяти
-    //сделать массив с категориями
-    //сделать лейбл и передать в него данные со свичей
-    @IBAction func sportSwitchAction() {
+        // Когда к нам попадает массив - очищаем его, после этого, при включении свича, в массив добавляется категория
+
+    @IBAction func switchAction() {
+        sights.removeAll()
+        if theatersSwitch.isOn {
+            sights.append("Театры")
+        }
+        if sportSwitch.isOn {
+            sights.append("Спорт")
+        }
+        if architectureSwitch.isOn {
+            sights.append("Архитектура")
+        }
+        if foodSwitch.isOn {
+            sights.append("Еда")
+        }
+        if parksSwitch.isOn {
+            sights.append("Парки")
+        }
+        testLabel.text = sights.joined(separator: ", ")
+        }
     }
     
-    @IBAction func architectureSwitchAction() {
-    }
-    
-    @IBAction func foodSwitchAction() {
-    }
-    
-    @IBAction func parksSwitchAction() {
-    }
+ 
     
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,4 +67,3 @@ class SettingsViewController: UIViewController {
 //    } else if let navigationVC = viewController as? UINavigationController {
 //        let _VC = navigationVC.topViewController as! _
 //        code
-}

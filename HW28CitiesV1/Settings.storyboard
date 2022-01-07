@@ -60,55 +60,71 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdm-wu-9oh">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="theatersSwitchAction" destination="BYZ-38-t0r" eventType="valueChanged" id="yuQ-Df-J4c"/>
+                                                    <action selector="switchAction" destination="BYZ-38-t0r" eventType="valueChanged" id="DtN-vt-vUG"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgB-K6-kql">
                                                 <rect key="frame" x="0.0" y="72" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="sportSwitchAction" destination="BYZ-38-t0r" eventType="valueChanged" id="fQQ-wz-zgZ"/>
+                                                    <action selector="switchAction" destination="BYZ-38-t0r" eventType="valueChanged" id="6oN-lb-Qtv"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P12-eK-uSX">
                                                 <rect key="frame" x="0.0" y="144" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="architectureSwitchAction" destination="BYZ-38-t0r" eventType="valueChanged" id="p8L-zw-NSp"/>
+                                                    <action selector="switchAction" destination="BYZ-38-t0r" eventType="valueChanged" id="XF1-lc-EfO"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i1E-8b-ObZ">
                                                 <rect key="frame" x="0.0" y="216" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="foodSwitchAction" destination="BYZ-38-t0r" eventType="valueChanged" id="E2E-Rc-7VB"/>
+                                                    <action selector="switchAction" destination="BYZ-38-t0r" eventType="valueChanged" id="CCW-sp-Ff0"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWX-dd-T9B">
                                                 <rect key="frame" x="0.0" y="288" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="parksSwitchAction" destination="BYZ-38-t0r" eventType="valueChanged" id="EY7-8x-HEf"/>
+                                                    <action selector="switchAction" destination="BYZ-38-t0r" eventType="valueChanged" id="WT0-pt-e7b"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jM0-RX-HhY">
+                                <rect key="frame" x="20" y="478.5" width="280" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jM0-RX-HhY" secondAttribute="bottom" constant="69" id="82R-3D-CGq"/>
+                            <constraint firstItem="jM0-RX-HhY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DSw-Sq-gxB"/>
                             <constraint firstItem="1pi-Z5-cSj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="F6E-Ai-vnn">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-40"/>
                             </constraint>
+                            <constraint firstItem="jM0-RX-HhY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FcM-Wx-CdG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1pi-Z5-cSj" secondAttribute="trailing" constant="20" id="PQf-Ru-7nl"/>
                             <constraint firstItem="1pi-Z5-cSj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="cvj-tM-Nb3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jM0-RX-HhY" secondAttribute="trailing" constant="20" id="ps3-be-H18"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="pjk-xp-84B"/>
                     <connections>
-                        <outlet property="aarchitectureLabel" destination="gxi-Dd-Xtt" id="9kV-lV-I2K"/>
+                        <outlet property="architectureLabel" destination="gxi-Dd-Xtt" id="9kV-lV-I2K"/>
+                        <outlet property="architectureSwitch" destination="P12-eK-uSX" id="asS-JA-Gu1"/>
                         <outlet property="foodLabel" destination="eYY-EM-kL2" id="G9y-av-hDD"/>
+                        <outlet property="foodSwitch" destination="i1E-8b-ObZ" id="i2u-3u-pQl"/>
                         <outlet property="parksLabel" destination="99u-fB-xNT" id="Erc-d2-B9E"/>
+                        <outlet property="parksSwitch" destination="SWX-dd-T9B" id="LaD-rQ-03c"/>
                         <outlet property="sportLabel" destination="73T-ZS-vbt" id="uMx-kq-45Z"/>
+                        <outlet property="sportSwitch" destination="bgB-K6-kql" id="zdg-RD-m0j"/>
+                        <outlet property="testLabel" destination="jM0-RX-HhY" id="sGD-wH-kbw"/>
                         <outlet property="theatersLabel" destination="o66-t2-pMe" id="uKg-m3-uZH"/>
+                        <outlet property="theatersSwitch" destination="wdm-wu-9oh" id="DX5-xm-Qqe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
