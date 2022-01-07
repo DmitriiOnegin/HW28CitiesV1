@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Сategora: String {
+enum Categora: String {
     
     case theatre = "Театр"
     case sport = "Спорт"

@@ -23,11 +23,6 @@ class StartViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//
-//        return 1
-//    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
         return citys.count
@@ -88,8 +83,10 @@ class StartViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let indexPath = tableView.indexPathForSelectedRow {
+            guard let cityVC = segue.destination as? CityViewController else { return }
+            cityVC.city = citys[indexPath.row]
+        }
     }
    
 

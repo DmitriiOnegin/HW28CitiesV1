@@ -15,6 +15,6 @@ struct Place {
     let city: String
     let image: String
     let discription: String
-    let category: Сategora
+    let category: Categora
     
 }

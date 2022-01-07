@@ -8,9 +8,13 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    var delegate: SettingsViewControllerDelegate!
+    private var categirys: [Categora] = [.theatre, .sport, .architecture]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        delegate.setNewValues(for: categirys)
 
         // Do any additional setup after loading the view.
     }

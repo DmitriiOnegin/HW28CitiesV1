@@ -29,7 +29,7 @@ extension City {
         
         for index in 0 ..< cityes.count {
             var places =  [Place]()
-            var categira = Сategora.theatre
+            var categira = Categora.theatre
             for place in sights[index] {
                 switch place[5] {
                 case "театр":
