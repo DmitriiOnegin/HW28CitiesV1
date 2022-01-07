@@ -131,16 +131,16 @@
             </objects>
             <point key="canvasLocation" x="-9654" y="526"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="Zrw-W0-Wvq">
             <objects>
-                <tableViewController id="Hw4-za-xTO" sceneMemberID="viewController">
+                <tableViewController id="Hw4-za-xTO" customClass="StartViewController" customModule="HW28CitiesV1" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2CA-Mi-QO7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wZn-By-1Dz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="wZn-By-1Dz">
                                 <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wZn-By-1Dz" id="cvY-Rw-xFE">
@@ -163,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="-8806.875" y="-258.80281690140845"/>
         </scene>
-        <!--View Controller-->
+        <!--City View Controller-->
         <scene sceneID="XQD-sr-HLx">
             <objects>
-                <viewController id="SRw-H3-tGQ" sceneMemberID="viewController">
+                <viewController id="SRw-H3-tGQ" customClass="CityViewController" customModule="HW28CitiesV1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7tG-fq-Kpj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="-7813" y="-259"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="bHC-kx-KhV">
             <objects>
-                <tabBarController id="q1g-Py-M1Y" sceneMemberID="viewController">
+                <tabBarController id="q1g-Py-M1Y" customClass="TabBarViewController" customModule="HW28CitiesV1" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VW2-CY-HwA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
