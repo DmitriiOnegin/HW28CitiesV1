@@ -11,7 +11,7 @@ struct Place {
     
     let name: String
     let address: String
-    let rating: Int
+    let rating: String
     let city: String
     let image: String
     let discription: String
