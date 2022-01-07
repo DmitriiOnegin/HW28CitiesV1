@@ -9,6 +9,10 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    var delegate: SettingsViewControllerDelegate!
+    private var categirys: [Categora] = [.theatre, .sport, .architecture]
+    
+    
     @IBOutlet weak var parksSwitch: UISwitch!
     @IBOutlet weak var foodSwitch: UISwitch!
     @IBOutlet weak var architectureSwitch: UISwitch!
