@@ -12,8 +12,8 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableViewOutlet: UITableView!
     
-    var cityesArray = City.returnCityesArray()
-    var сitiesArraySorting = City.returnCityesArray()
+    var citys = City.returnCityesArray()
+    var сitiesSorting: [City] = City.returnCityesArray()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewOutlet.dataSource = self
@@ -25,10 +25,10 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
     func sortedArrayOfCities(searchText: String) -> [City] {
         
         let text = searchText
-        guard text != "" else {return cityesArray}
+        guard text != "" else {return citys}
         var sortedArray: [City] = []
-        for index in 0..<cityesArray.count {
-            let city = cityesArray[index]
+        for index in 0 ..< citys.count {
+            let city = citys[index]
             guard city.usersCity.lowercased().contains(text.lowercased()) || city.userName.lowercased().contains(text.lowercased()) else {continue}
             sortedArray.append(city)
         }
@@ -40,7 +40,7 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
     
     //MARK: -  автоматическое обновление таблице при вводе поискового запроса
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        сitiesArraySorting = sortedArrayOfCities(searchText: searchText)
+        сitiesSorting = sortedArrayOfCities(searchText: searchText)
         tableViewOutlet.reloadData()
     }
  
@@ -59,8 +59,8 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
     //MARK: - navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let mainVC = segue.destination as? CityViewController else {return}
-        guard let indexPath = tableViewOutlet.indexPathForSelectedRow?.row else {return}
-        let city = сitiesArraySorting[indexPath]
+        guard let index = tableViewOutlet.indexPathForSelectedRow?.row else {return}
+        let city = сitiesSorting[index]
         mainVC.city = city
     }
 }
@@ -68,7 +68,7 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
 extension StartViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        сitiesArraySorting.count
+        сitiesSorting.count
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -78,7 +78,7 @@ extension StartViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-       let city = сitiesArraySorting[indexPath.row]
+       let city = сitiesSorting[indexPath.row]
         var content = cell.defaultContentConfiguration()
         content.text = city.usersCity
         content.secondaryText = city.userName
