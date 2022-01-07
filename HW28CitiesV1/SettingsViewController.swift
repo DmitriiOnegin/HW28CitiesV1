@@ -26,12 +26,12 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var testLabel: UILabel!
     
 
-    var sights = ["Театры", "Спорт", "Архитектура", "Еда", "Парки"]
-    // тут делаем экземпляр структуры из модели
+//    var sights = ["Театры", "Спорт", "Архитектура", "Еда", "Парки"]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testLabel.text = sights.joined(separator: ", ")
+//        testLabel.text = sights.joined(separator: ", ")
        // delegate.setNewValues(for: categirys)
     }
 
@@ -39,41 +39,35 @@ class SettingsViewController: UIViewController {
         // Когда к нам попадает массив - очищаем его, после этого, при включении свича, в массив добавляется категория
 
     @IBAction func switchAction() {
-        sights.removeAll()
+//        sights.removeAll()
+        categirys.removeAll()
         
-        
-//        switch UISwitch().isOn {
-//        case theatersSwitch.isOn:
+        if theatersSwitch.isOn {
+            categirys.append(.theatre)
 //            guard let theaters = theatersLabel.text else { return }
 //            sights.append(theaters)
-//        case sportSwitch.isOn:
-//            guard let sport = sportLabel.text else { return }
-//            sights.append(sport)
-//
-//        default:
-//            break
-//        }
-        if theatersSwitch.isOn {
-            guard let theaters = theatersLabel.text else { return }
-            sights.append(theaters)
         }
         if sportSwitch.isOn {
-            guard let sport = sportLabel.text else { return }
-            sights.append(sport)
+            categirys.append(.sport)
+//            guard let sport = sportLabel.text else { return }
+//            sights.append(sport)
         }
         if architectureSwitch.isOn {
-            guard let architecture = architectureLabel.text else { return }
-            sights.append(architecture)
+            categirys.append(.architecture)
+//            guard let architecture = architectureLabel.text else { return }
+//            sights.append(architecture)
         }
         if foodSwitch.isOn {
-            guard let food = foodLabel.text else { return }
-            sights.append(food)
+            categirys.append(.food)
+//            guard let food = foodLabel.text else { return }
+//            sights.append(food)
         }
         if parksSwitch.isOn {
-            guard let parks = parksLabel.text else { return }
-            sights.append(parks)
+            categirys.append(.park)
+//            guard let parks = parksLabel.text else { return }
+//            sights.append(parks)
         }
-        testLabel.text = sights.joined(separator: ", ")
+//        testLabel.text = sights.joined(separator: ", ")
         }
     }
     
