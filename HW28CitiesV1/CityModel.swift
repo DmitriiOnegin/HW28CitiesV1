@@ -14,7 +14,6 @@ struct City {
     let area: String
     let foundedDate: String
     let places: [Place]
-    //let sights: [[String]]
 }
 
 extension City {
@@ -26,36 +25,23 @@ extension City {
         let foundedDates = DataManager.shared.foundedDate
         let sights = DataManager.shared.sights
         
-//        ["место категории театр",
-//         "адрес",
-//         "город",
-//         "рейтинг",
-//         "описание",
-//         "театр"],
-        
-//    case theatre = "Театр"
-//    case sport = "Спорт"
-//    case architecture = "Архитектура"
-//    case food = "Еда"
-//    case park = "Парк"
-        
         var cityesArray: [City] = []
         
         for index in 0 ..< cityes.count {
             var places =  [Place]()
-          //  var categiry = Category.Type
+            var categira = Сategora.theatre
             for place in sights[index] {
                 switch place[5] {
                 case "театр":
-                        
+                    categira = .theatre
                 case "спорт":
-                    
+                    categira = .sport
                 case "архитектура":
-                    
+                    categira = .architecture
                 case "еда":
-                    
+                    categira = .food
                 case "парк":
-                    
+                    categira = .park
                 default:
                     break
                 }
@@ -66,8 +52,8 @@ extension City {
                                      city: place[2],
                                      image: place[0],
                                      discription: place[4],
-                                     category: )
-                
+                                     category: categira)
+                places.append(newPlace)
             }
             
             
@@ -77,17 +63,18 @@ extension City {
                 population: populations[index],
                 area: areas[index],
                 foundedDate: foundedDates[index],
-                sights: sights[index]
+                places: places
             )
             cityesArray.append(city)
         }
-        return cityesArray.sorted(by: <)
+        // return cityesArray.sorted(by: <)
+        return cityesArray
         
     }
 }
 
-extension City: Comparable  {
-    static func < (lhs: City, rhs: City) -> Bool {
-        lhs.usersCity < rhs.usersCity
-    }
-}
+//extension City: Comparable  {
+//    static func < (lhs: City, rhs: City) -> Bool {
+//        lhs.usersCity < rhs.usersCity
+//    }
+//}

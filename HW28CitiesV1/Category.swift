@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Сategory: String {
+enum Сategora: String {
     
     case theatre = "Театр"
     case sport = "Спорт"
@@ -15,3 +15,5 @@ enum Сategory: String {
     case food = "Еда"
     case park = "Парк"
 }
+
+
