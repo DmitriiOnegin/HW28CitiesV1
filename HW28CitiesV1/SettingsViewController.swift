@@ -36,19 +36,24 @@ class SettingsViewController: UIViewController {
     @IBAction func switchAction() {
         sights.removeAll()
         if theatersSwitch.isOn {
-            sights.append("Театры")
+            guard let theaters = theatersLabel.text else { return }
+            sights.append(theaters)
         }
         if sportSwitch.isOn {
-            sights.append("Спорт")
+            guard let sport = sportLabel.text else { return }
+            sights.append(sport)
         }
         if architectureSwitch.isOn {
-            sights.append("Архитектура")
+            guard let architecture = architectureLabel.text else { return }
+            sights.append(architecture)
         }
         if foodSwitch.isOn {
-            sights.append("Еда")
+            guard let food = foodLabel.text else { return }
+            sights.append(food)
         }
         if parksSwitch.isOn {
-            sights.append("Парки")
+            guard let parks = parksLabel.text else { return }
+            sights.append(parks)
         }
         testLabel.text = sights.joined(separator: ", ")
         }
