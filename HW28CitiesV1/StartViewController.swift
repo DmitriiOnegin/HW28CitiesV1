@@ -8,6 +8,8 @@
 import UIKit
 
 class StartViewController: UITableViewController {
+    
+    var citys = [City]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class StartViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-        return 5
+        return citys.count
     }
 
     
@@ -37,7 +39,8 @@ class StartViewController: UITableViewController {
 
         var content = cell.defaultContentConfiguration()
         
-        content.text = "1111"
+        content.text = citys[indexPath.row].usersCity
+        content.secondaryText = citys[indexPath.row].userName
         cell.contentConfiguration = content
        
 
