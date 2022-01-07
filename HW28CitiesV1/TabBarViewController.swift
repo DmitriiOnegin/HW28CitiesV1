@@ -15,7 +15,17 @@ class TabBarViewController: UITabBarController {
     
     let citys = City.returnCityesArray()
     
-    private var categirys: [Categora] = [.theatre, .sport, .architecture, .food, .park]
+    var categirys: [Categora] = [.theatre, .sport, .architecture, .food, .park] {
+        didSet {
+            print(self.categirys)
+            guard let startNVC = viewControllers?.first as? UINavigationController else { return }
+            guard let startVC = startNVC.topViewController as? StartViewController else { return }
+            
+            startVC.categirys = categirys
+            print(self.categirys)
+        }
+    }
+   // var categirys: [Categora] = [.theatre, .sport, .architecture]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +33,10 @@ class TabBarViewController: UITabBarController {
         
     }
     
+    
+    
 }
+
 
 extension TabBarViewController {
     private func setupViewControllers() {
@@ -31,10 +44,12 @@ extension TabBarViewController {
         guard let settingsVC = settingsNVC.topViewController as? SettingsViewController else { return }
         settingsVC.delegate = self
         
+        
         guard let startNVC = viewControllers?.first as? UINavigationController else { return }
         guard let startVC = startNVC.topViewController as? StartViewController else { return }
         
         startVC.citys = citys
+        startVC.categirys = categirys
 
     }
 }

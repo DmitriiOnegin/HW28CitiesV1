@@ -7,23 +7,28 @@
 
 import UIKit
 
-//protocol SettingsViewControllerDelegate {
-//    func setNewValues(for categirys: [Categora])
-//}
+protocol TabBarViewControllerDelegate {
+    func setNewValues(for categirys: [Categora])
+}
 
 class CityViewController: UIViewController {
     
     var city: City!
+   var categirys = [Categora]()
+    var delegate: SettingsViewControllerDelegate!
     
-    private var categirys: [Categora] = [.theatre, .sport, .architecture, .food, .park]
+    //private var categirys: [Categora] = [.theatre, .sport, .architecture, .food, .park]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+//        delegate.setNewValues(for: categirys)
+//        print(self.categirys)
+    }
     
     // MARK: - Navigation
 
@@ -35,6 +40,7 @@ class CityViewController: UIViewController {
 
 extension CityViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       // delegate.setNewValues(for: categirys)
         categirys.count
        // city.places.count
     }
@@ -59,9 +65,10 @@ extension CityViewController: UITableViewDataSource {
     
 }
 
-//extension CityViewController: SettingsViewControllerDelegate {
-//    func setNewValues(for categirys: [Categora]) {
-//        
-//        self.categirys = categirys
-//    }
-//}
+extension CityViewController: TabBarViewControllerDelegate {
+    func setNewValues(for categirys: [Categora]) {
+
+        self.categirys = categirys
+
+    }
+}

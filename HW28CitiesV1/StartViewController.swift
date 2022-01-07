@@ -10,6 +10,7 @@ import UIKit
 class StartViewController: UITableViewController {
     
     var citys = [City]()
+    var categirys: [Categora]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,8 @@ class StartViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+   
 
     // MARK: - Table view data source
 
@@ -86,6 +89,7 @@ class StartViewController: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             guard let cityVC = segue.destination as? CityViewController else { return }
             cityVC.city = citys[indexPath.row]
+            cityVC.categirys = categirys
         }
     }
    
