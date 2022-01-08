@@ -39,7 +39,6 @@
                             <outlet property="delegate" destination="xHB-nS-AZz" id="A71-Xb-10R"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Citys" id="mTW-qE-aIy"/>
                     <navigationItem key="navigationItem" title="Startt View Controller" id="JRq-Ef-Qo5"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>

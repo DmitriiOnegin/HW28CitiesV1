@@ -33,9 +33,14 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControllers()
+        viewControllers?[0].tabBarItem.title = NSLocalizedString("Home", comment: "")
+         viewControllers?[1].tabBarItem.title = NSLocalizedString("Settings", comment: "")
         
     }
-    
+    override func viewWillLayoutSubviews() {
+        tabBarItem.title = "dsfsdf"
+        
+    }
     
     
 }
