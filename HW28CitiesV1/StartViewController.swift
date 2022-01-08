@@ -7,14 +7,21 @@
 
 import UIKit
 
+protocol CityViewControllerDelegate {
+   
+    func getNewValues() -> [Categora]
+}
+
 class StartViewController: UITableViewController {
     
     var citys = [City]()
-    var categirys: [Categora]!
-
+    var categirys: [Categora] = []
+    
+    var delegate: StartViewControllerDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -22,6 +29,9 @@ class StartViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        categirys = delegate.getNewValues()
+    }
    
 
     // MARK: - Table view data source

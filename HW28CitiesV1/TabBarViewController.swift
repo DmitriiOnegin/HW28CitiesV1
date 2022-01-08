@@ -10,6 +10,10 @@ import UIKit
 protocol SettingsViewControllerDelegate {
     func setNewValues(for categirys: [Categora])
 }
+protocol StartViewControllerDelegate {
+   
+    func getNewValues() -> [Categora]
+}
 
 class TabBarViewController: UITabBarController {
     
@@ -25,7 +29,6 @@ class TabBarViewController: UITabBarController {
             print(self.categirys)
         }
     }
-   // var categirys: [Categora] = [.theatre, .sport, .architecture]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +52,9 @@ extension TabBarViewController {
         guard let startVC = startNVC.topViewController as? StartViewController else { return }
         
         startVC.citys = citys
-        startVC.categirys = categirys
+        startVC.delegate = self
 
+        
     }
 }
 
@@ -59,4 +63,12 @@ extension TabBarViewController: SettingsViewControllerDelegate {
         
         self.categirys = categirys
     }
+}
+
+extension TabBarViewController: StartViewControllerDelegate {
+    func getNewValues() -> [Categora] {
+        categirys
+    }
+    
+    
 }

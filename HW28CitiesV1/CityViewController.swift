@@ -65,10 +65,18 @@ extension CityViewController: UITableViewDataSource {
     
 }
 
-extension CityViewController: TabBarViewControllerDelegate {
-    func setNewValues(for categirys: [Categora]) {
+//extension CityViewController: SettingsViewControllerDelegate {
+//    func setNewValues(for categirys: [Categora]) {
+//
+//        self.categirys = categirys
+//
+//    }
+//}
 
-        self.categirys = categirys
-
-    }
-}
+//extension CityViewController: TabBarViewControllerDelegate {
+//    func setNewValues(for categirys: [Categora]) {
+//
+//        self.categirys = categirys
+//
+//    }
+//}
