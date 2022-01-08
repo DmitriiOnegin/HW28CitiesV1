@@ -27,22 +27,14 @@ class TabBarViewController: UITabBarController {
             print(self.categirys)
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControllers()
         viewControllers?[0].tabBarItem.title = NSLocalizedString("Home", comment: "")
-         viewControllers?[1].tabBarItem.title = NSLocalizedString("Settings", comment: "")
-        
+        viewControllers?[1].tabBarItem.title = NSLocalizedString("Settings", comment: "")
     }
-    override func viewWillLayoutSubviews() {
-        tabBarItem.title = "dsfsdf"
-        
-    }
-    
-    
 }
-
 
 extension TabBarViewController {
     private func setupViewControllers() {
@@ -56,8 +48,6 @@ extension TabBarViewController {
         
         startVC.citys = citys
         startVC.delegate = self
-
-        
     }
 }
 
@@ -72,6 +62,4 @@ extension TabBarViewController: StartViewControllerDelegate {
     func getNewValues() -> [Categora] {
         categirys
     }
-    
-    
 }
