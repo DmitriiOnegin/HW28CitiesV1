@@ -58,7 +58,6 @@
 		192CD985278607580084E0C1 = {
 			isa = PBXGroup;
 			children = (
-				A42A34AB2788BE7A005D1A95 /* place.swift */,
 				192CD990278607580084E0C1 /* HW28CitiesV1 */,
 				192CD98F278607580084E0C1 /* Products */,
 			);
@@ -75,12 +74,7 @@
 		192CD990278607580084E0C1 /* HW28CitiesV1 */ = {
 			isa = PBXGroup;
 			children = (
-				A42A34A92788BE04005D1A95 /* DataM.swift */,
-				A42A34A72788BD0A005D1A95 /* Category.swift */,
-				A42A34A52788BCCE005D1A95 /* CityVC.swift */,
-				A42A34A32788BB75005D1A95 /* Model.swift */,
-				A42A34A12788BB4C005D1A95 /* TabBarVC.swift */,
-				A42A34972788B307005D1A95 /* StartVC.swift */,
+				A42A34AD2789FFF6005D1A95 /* TestingFiles */,
 				192CD991278607580084E0C1 /* AppDelegate.swift */,
 				192CD993278607580084E0C1 /* SceneDelegate.swift */,
 				192CD995278607580084E0C1 /* ViewController.swift */,
@@ -92,6 +86,20 @@
 				192CD99F2786075B0084E0C1 /* Info.plist */,
 			);
 			path = HW28CitiesV1;
+			sourceTree = "<group>";
+		};
+		A42A34AD2789FFF6005D1A95 /* TestingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A42A34AB2788BE7A005D1A95 /* place.swift */,
+				A42A34A72788BD0A005D1A95 /* Category.swift */,
+				A42A34A52788BCCE005D1A95 /* CityVC.swift */,
+				A42A34A32788BB75005D1A95 /* Model.swift */,
+				A42A34A12788BB4C005D1A95 /* TabBarVC.swift */,
+				A42A34972788B307005D1A95 /* StartVC.swift */,
+				A42A34A92788BE04005D1A95 /* DataM.swift */,
+			);
+			path = TestingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
