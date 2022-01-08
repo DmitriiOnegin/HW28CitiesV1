@@ -9,8 +9,6 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    var delegate: SettingsViewControllerDelegate!
-    private var categirys: [Categora] = [.theatre, .sport, .architecture, .food, .park]
     
     
     @IBOutlet weak var parksSwitch: UISwitch!
@@ -23,8 +21,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var parksLabel: UILabel!
     @IBOutlet weak var architectureLabel: UILabel!
     @IBOutlet weak var foodLabel: UILabel!
-    @IBOutlet weak var testLabel: UILabel!
 
+    var delegate: SettingsViewControllerDelegate!
+    private var categirys: [Categora] = [.theatre, .sport, .architecture, .food, .park]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +31,9 @@ class SettingsViewController: UIViewController {
         delegate.setNewValues(for: categirys)
     }
 
-
+    
     @IBAction func switchAction() {
-
+        
         categirys.removeAll()
         
         if theatersSwitch.isOn {
@@ -42,21 +41,21 @@ class SettingsViewController: UIViewController {
         }
         if sportSwitch.isOn {
             categirys.append(.sport)
-
+            
         }
         if architectureSwitch.isOn {
             categirys.append(.architecture)
-
+            
         }
         if foodSwitch.isOn {
             categirys.append(.food)
-
+            
         }
         if parksSwitch.isOn {
             categirys.append(.park)
-
-        }
+            
         }
     }
-    
+}
+
 
