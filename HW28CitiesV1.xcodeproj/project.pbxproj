@@ -59,12 +59,28 @@
 				192CD991278607580084E0C1 /* AppDelegate.swift */,
 				192CD993278607580084E0C1 /* SceneDelegate.swift */,
 				192CD995278607580084E0C1 /* ViewController.swift */,
+				199D479A2789AB3A00F26949 /* DataManager */,
+				199D47992789AB2300F26949 /* Models */,
 				192CD997278607580084E0C1 /* Main.storyboard */,
 				192CD99A2786075B0084E0C1 /* Assets.xcassets */,
 				192CD99C2786075B0084E0C1 /* LaunchScreen.storyboard */,
 				192CD99F2786075B0084E0C1 /* Info.plist */,
 			);
 			path = HW28CitiesV1;
+			sourceTree = "<group>";
+		};
+		199D47992789AB2300F26949 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		199D479A2789AB3A00F26949 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
