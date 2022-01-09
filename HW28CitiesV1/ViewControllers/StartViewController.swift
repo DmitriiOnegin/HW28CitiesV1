@@ -79,7 +79,9 @@ extension StartViewController : UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print(indexPath.row)
+        let city = сitiesSorting[indexPath.row]
+       performSegue(withIdentifier: "cell", sender: city)
+      
         //tableView.cellForRow(at: indexPath)?.backgroundColor = UIColor.systemRed
         
     }
@@ -97,17 +99,9 @@ extension StartViewController : UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("prepare(for segue")
-        guard let cityVC = segue.destination as? CityViewController else { print("destination as? CityViewController")
-            return  }
-        
-        guard let indexPath = tableViewOutlet.indexPathForSelectedRow else { print("tableViewOutlet.indexPathForSelectedRow")
-            return
-        }
-        let city = сitiesSorting[indexPath.row]
-        cityVC.city = city
-        print(city)
+        guard let cityVC = segue.destination as? CityViewController else {return  }
+    
+     cityVC.city = sender as? City
         cityVC.categirys = categirys
-        print("prepare(for segue")
     }
 }
