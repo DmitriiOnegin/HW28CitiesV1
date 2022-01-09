@@ -12,8 +12,13 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableViewOutlet: UITableView!
     
-    var citys = City.returnCityesArray()
+    //var citys = City.returnCityesArray()
+    var citys: [City] = []
     var сitiesSorting: [City] = City.returnCityesArray()
+    var categirys: [Categora] = []
+    
+    var delegate: StartViewControllerDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewOutlet.dataSource = self
@@ -58,10 +63,10 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
     
     //MARK: - navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let mainVC = segue.destination as? CityViewController else {return}
+        guard let cityVC = segue.destination as? CityViewController else {return}
         guard let index = tableViewOutlet.indexPathForSelectedRow?.row else {return}
         let city = сitiesSorting[index]
-        mainVC.city = city
+        cityVC.city = city
     }
 }
 //MARK: - tableView

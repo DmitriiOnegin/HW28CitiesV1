@@ -19,7 +19,8 @@ class CityViewController: UIViewController {
     @IBOutlet weak var foundedDateLabel: UILabel!
     @IBOutlet weak var sightsTableView: UITableView!
     
-    var city: [City] = City.returnCityesArray()
+   // var city: [City] = City.returnCityesArray()
+    var city: City!
     var categirys: [Categora] = [.theatre, .sport, .architecture, .food, .park]
     var sortedPlace: [Place] = []
 //    var delegate: SettingsViewControllerDelegate!
@@ -40,7 +41,7 @@ class CityViewController: UIViewController {
     
     private func getSortedPlace() {
         for categiry in categirys {
-            for place in city[4].places {
+            for place in city.places {
                 if categiry == place.category {
                     sortedPlace.append(place)
                 }
@@ -49,11 +50,11 @@ class CityViewController: UIViewController {
     }
     
     private func setupCity() {
-        navigationItem.title = city[4].usersCity
-        currentCityView.image = UIImage(named: city[4].usersCity)
-        populationLabel.text = "Численность населения: \(String(city[4].population))"
-        areaLabel.text = "Площадь города: \(String(city[4].area))"
-        foundedDateLabel.text = "Основан в : \(String(city[4].foundedDate))"
+        navigationItem.title = city.usersCity
+        currentCityView.image = UIImage(named: city.usersCity)
+        populationLabel.text = "Численность населения: \(String(city.population))"
+        areaLabel.text = "Площадь города: \(String(city.area))"
+        foundedDateLabel.text = "Основан в : \(String(city.foundedDate))"
     }
 }
     extension CityViewController: UITableViewDataSource {
