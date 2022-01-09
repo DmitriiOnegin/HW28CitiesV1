@@ -16,8 +16,8 @@ class CityViewController: UIViewController {
     @IBOutlet weak var sightsTableView: UITableView!
     
     var city: City!
-    var categirys: [Categora] = [.theatre, .sport, .architecture, .food, .park]
-    var sortedPlace: [Place] = []
+    var categirys: [Categora] = []
+    private var sortedPlace: [Place] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,9 @@ class CityViewController: UIViewController {
         getSortedPlace()
         setupCity()
     }
+}
+
+extension CityViewController {
     
     private func getSortedPlace() {
         for categiry in categirys {
@@ -44,6 +47,7 @@ class CityViewController: UIViewController {
         foundedDateLabel.text = "Основан в : \(String(city.foundedDate))"
     }
 }
+
 extension CityViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         categirys.count

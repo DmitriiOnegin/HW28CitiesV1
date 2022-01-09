@@ -23,12 +23,6 @@ class SettingsViewController: UIViewController {
     var delegate: SettingsViewControllerDelegate!
     private var categirys: [Categora] = [.theatre, .sport, .architecture, .food, .park]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    }
-    
     @IBAction func switchAction() {
         
         categirys.removeAll()

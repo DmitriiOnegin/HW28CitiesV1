@@ -13,10 +13,10 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
     @IBOutlet weak var tableViewOutlet: UITableView!
     
     var citys: [City] = []
-    var сitiesSorting: [City] = City.returnCityesArray()
     var categirys: [Categora] = []
-    
     var delegate: StartViewControllerDelegate!
+    
+    private var сitiesSorting: [City] = City.returnCityesArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
     }
     
     //MARK: - функция сортировки по тексту из searchBar
-    func sortedArrayOfCities(searchText: String) -> [City] {
+    private func sortedArrayOfCities(searchText: String) -> [City] {
         
         let text = searchText
         guard text != "" else {return citys}
@@ -63,8 +63,6 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         super .touchesBegan(touches, with: event)
         self.view.endEditing(true)
     }
-    
-    
 }
 //MARK: - tableView
 extension StartViewController : UITableViewDataSource, UITableViewDelegate {

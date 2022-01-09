@@ -21,6 +21,12 @@ class PlaceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewControllers()
+    }
+}
+extension PlaceViewController {
+    
+    private func setupViewControllers() {
         imageLabel.image = UIImage(named: place.image)
         nameLabel.text = place.name
         rating.text = "рейтинг " + place.rating
@@ -29,5 +35,4 @@ class PlaceViewController: UIViewController {
         street.text = place.address
         discription.text = place.discription
     }
-    
 }
