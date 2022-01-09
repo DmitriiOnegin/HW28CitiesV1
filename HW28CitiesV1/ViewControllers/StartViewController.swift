@@ -8,11 +8,10 @@
 import UIKit
 
 class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDelegate {
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableViewOutlet: UITableView!
     
-    //var citys = City.returnCityesArray()
     var citys: [City] = []
     var сitiesSorting: [City] = City.returnCityesArray()
     var categirys: [Categora] = []
@@ -24,14 +23,10 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
         searchBar.delegate = self
-        
-        print(citys.count)
-        print(сitiesSorting.count)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         categirys = delegate.getNewValues()
-        print(categirys.count)
     }
     
     //MARK: - функция сортировки по тексту из searchBar
@@ -56,18 +51,18 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         сitiesSorting = sortedArrayOfCities(searchText: searchText)
         tableViewOutlet.reloadData()
     }
- 
-
+    
+    
     //MARK: - скрывает клавиатуру по кнопке Done
-        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-            searchBar.resignFirstResponder()
-        }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
     
     //MARK: - скрывает клавиатуру по клику
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
         self.view.endEditing(true)
-     }
+    }
     
     
 }
@@ -85,11 +80,11 @@ extension StartViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-       let city = сitiesSorting[indexPath.row]
+        let city = сitiesSorting[indexPath.row]
         var content = cell.defaultContentConfiguration()
         content.text = city.usersCity
         content.secondaryText = city.userName
-       
+        
         cell.contentConfiguration = content
         return cell
     }

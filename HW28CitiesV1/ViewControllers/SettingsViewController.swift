@@ -8,8 +8,6 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
-    
     
     @IBOutlet weak var parksSwitch: UISwitch!
     @IBOutlet weak var foodSwitch: UISwitch!
@@ -21,16 +19,15 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var parksLabel: UILabel!
     @IBOutlet weak var architectureLabel: UILabel!
     @IBOutlet weak var foodLabel: UILabel!
-
+    
     var delegate: SettingsViewControllerDelegate!
     private var categirys: [Categora] = [.theatre, .sport, .architecture, .food, .park]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        
     }
-
     
     @IBAction func switchAction() {
         

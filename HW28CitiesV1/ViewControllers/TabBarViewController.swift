@@ -22,10 +22,8 @@ class TabBarViewController: UITabBarController {
             print(self.categirys)
             guard let startNVC = viewControllers?.first as? UINavigationController else { return }
             guard let startVC = startNVC.topViewController as? StartViewController else { return }
-
+            
             startVC.citys = citys
-          //  startVC.categirys = categirys
-            print(self.categirys)
         }
     }
     
@@ -42,11 +40,11 @@ extension TabBarViewController {
         guard let settingsNVC = viewControllers?.last as? UINavigationController else { return }
         guard let settingsVC = settingsNVC.topViewController as? SettingsViewController else { return }
         settingsVC.delegate = self
-
-
+        
+        
         guard let startNVC = viewControllers?.first as? UINavigationController else { return }
         guard let startVC = startNVC.topViewController as? StartViewController else { return }
-
+        
         startVC.citys = citys
         startVC.delegate = self
     }

@@ -18,14 +18,14 @@ class CityViewController: UIViewController {
     var city: City!
     var categirys: [Categora] = [.theatre, .sport, .architecture, .food, .park]
     var sortedPlace: [Place] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sightsTableView.rowHeight = 80
         getSortedPlace()
         setupCity()
     }
-   
+    
     private func getSortedPlace() {
         for categiry in categirys {
             for place in city.places {
@@ -34,7 +34,6 @@ class CityViewController: UIViewController {
                 }
             }
         }
-        print(sortedPlace.count)
     }
     
     private func setupCity() {
@@ -45,37 +44,37 @@ class CityViewController: UIViewController {
         foundedDateLabel.text = "Основан в : \(String(city.foundedDate))"
     }
 }
-    extension CityViewController: UITableViewDataSource, UITableViewDelegate {
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            categirys.count
-        }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "place", for: indexPath)
-            
-            var content = cell.defaultContentConfiguration()
-            
-            content.text = sortedPlace[indexPath.row].name
-            content.image = UIImage(named: sortedPlace[indexPath.row].name)
-            content.imageProperties.maximumSize.width = 80
-            content.imageProperties.cornerRadius = tableView.rowHeight / 2
-            cell.contentConfiguration = content
-            
-            return cell
-        }
-        
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            tableView.deselectRow(at: indexPath, animated: true)
-            let place = sortedPlace[indexPath.row]
-            print(place)
-            performSegue(withIdentifier: "placeSegue", sender: place)
-        }
-        
-        
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let placeVC = segue.destination as? PlaceViewController else {return  }
-            
-            placeVC.place = sender as? Place
-        }
-        
+extension CityViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        categirys.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "place", for: indexPath)
+        
+        var content = cell.defaultContentConfiguration()
+        
+        content.text = sortedPlace[indexPath.row].name
+        content.image = UIImage(named: sortedPlace[indexPath.row].name)
+        content.imageProperties.maximumSize.width = 80
+        content.imageProperties.cornerRadius = tableView.rowHeight / 2
+        cell.contentConfiguration = content
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let place = sortedPlace[indexPath.row]
+        print(place)
+        performSegue(withIdentifier: "placeSegue", sender: place)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let placeVC = segue.destination as? PlaceViewController else {return  }
+        
+        placeVC.place = sender as? Place
+    }
+    
+}

@@ -8,7 +8,7 @@
 import UIKit
 
 class PlaceViewController: UIViewController {
-
+    
     @IBOutlet weak var imageLabel: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var rating: UILabel!
@@ -29,5 +29,5 @@ class PlaceViewController: UIViewController {
         street.text = place.address
         discription.text = place.discription
     }
-
+    
 }
