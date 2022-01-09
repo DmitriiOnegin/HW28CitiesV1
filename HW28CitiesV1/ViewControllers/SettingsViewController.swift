@@ -55,6 +55,7 @@ class SettingsViewController: UIViewController {
             categirys.append(.park)
             
         }
+        
         delegate.setNewValues(for: categirys)
     }
 }

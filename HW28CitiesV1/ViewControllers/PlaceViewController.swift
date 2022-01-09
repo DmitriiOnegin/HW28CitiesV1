@@ -17,17 +17,17 @@ class PlaceViewController: UIViewController {
     @IBOutlet weak var street: UILabel!
     @IBOutlet weak var discription: UILabel!
     
-    
+    var place: Place!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageLabel.image = UIImage(named: "Москва")
-        nameLabel.text = "Театр Кино"
-        rating.text = "рейтинг 10"
-        category.text = "Категория Архитектура"
-        city.text = "город Москва"
-        street.text = "улица Московская 10"
-        discription.text = "МоскваМосква"
+        imageLabel.image = UIImage(named: place.image)
+        nameLabel.text = place.name
+        rating.text = "рейтинг " + place.rating
+        category.text = "Категория " + place.category.rawValue
+        city.text = "город " + place.city
+        street.text = place.address
+        discription.text = place.discription
     }
 
 }

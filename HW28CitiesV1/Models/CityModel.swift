@@ -40,7 +40,7 @@ extension City {
                     categira = .architecture
                 case "еда":
                     categira = .food
-                case "парк":
+                case "парки":
                     categira = .park
                 default:
                     break

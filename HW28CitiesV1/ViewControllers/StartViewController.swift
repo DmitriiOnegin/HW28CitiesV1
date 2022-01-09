@@ -80,10 +80,7 @@ extension StartViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let city = сitiesSorting[indexPath.row]
-       performSegue(withIdentifier: "cell", sender: city)
-      
-        //tableView.cellForRow(at: indexPath)?.backgroundColor = UIColor.systemRed
-        
+        performSegue(withIdentifier: "cell", sender: city)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,7 +89,7 @@ extension StartViewController : UITableViewDataSource, UITableViewDelegate {
         var content = cell.defaultContentConfiguration()
         content.text = city.usersCity
         content.secondaryText = city.userName
-        cell.backgroundColor = UIColor.systemGray4
+       
         cell.contentConfiguration = content
         return cell
     }
@@ -100,8 +97,8 @@ extension StartViewController : UITableViewDataSource, UITableViewDelegate {
     //MARK: - navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let cityVC = segue.destination as? CityViewController else {return  }
-    
-     cityVC.city = sender as? City
+        
+        cityVC.city = sender as? City
         cityVC.categirys = categirys
     }
 }
