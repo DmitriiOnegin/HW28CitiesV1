@@ -25,6 +25,7 @@
 		199D47B4278AB31600F26949 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199D47B2278AB31600F26949 /* CityViewController.swift */; };
 		199D47B7278AB32B00F26949 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199D47B5278AB32B00F26949 /* PlaceViewController.swift */; };
 		199D47B8278AB32B00F26949 /* PlaceVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199D47B6278AB32B00F26949 /* PlaceVC.storyboard */; };
+		199D47BD278AFB5800F26949 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 199D47BC278AFB5800F26949 /* Documentation.docc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		199D47B2278AB31600F26949 /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		199D47B5278AB32B00F26949 /* PlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		199D47B6278AB32B00F26949 /* PlaceVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlaceVC.storyboard; sourceTree = "<group>"; };
+		199D47BC278AFB5800F26949 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				199D47B9278AB36B00F26949 /* Storyboards */,
 				192CD99A2786075B0084E0C1 /* Assets.xcassets */,
 				192CD99F2786075B0084E0C1 /* Info.plist */,
+				199D47BC278AFB5800F26949 /* Documentation.docc */,
 			);
 			path = HW28CitiesV1;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				192CD992278607580084E0C1 /* AppDelegate.swift in Sources */,
 				199D47B4278AB31600F26949 /* CityViewController.swift in Sources */,
 				199D47B0278AB2F900F26949 /* StartViewController.swift in Sources */,
+				199D47BD278AFB5800F26949 /* Documentation.docc in Sources */,
 				192CD994278607580084E0C1 /* SceneDelegate.swift in Sources */,
 				199D47A12789ACDA00F26949 /* Category.swift in Sources */,
 				199D47A22789ACDA00F26949 /* CityModel.swift in Sources */,
