@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		192CD98E278607580084E0C1 /* HW28CitiesV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW28CitiesV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		192CD98E278607580084E0C1 /* Find Cool Place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find Cool Place.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		192CD991278607580084E0C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		192CD993278607580084E0C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		192CD998278607580084E0C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		192CD98F278607580084E0C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				192CD98E278607580084E0C1 /* HW28CitiesV1.app */,
+				192CD98E278607580084E0C1 /* Find Cool Place.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		192CD98D278607580084E0C1 /* HW28CitiesV1 */ = {
+		192CD98D278607580084E0C1 /* Find Cool Place */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 192CD9A22786075B0084E0C1 /* Build configuration list for PBXNativeTarget "HW28CitiesV1" */;
+			buildConfigurationList = 192CD9A22786075B0084E0C1 /* Build configuration list for PBXNativeTarget "Find Cool Place" */;
 			buildPhases = (
 				192CD98A278607580084E0C1 /* Sources */,
 				192CD98B278607580084E0C1 /* Frameworks */,
@@ -153,9 +153,9 @@
 			);
 			dependencies = (
 			);
-			name = HW28CitiesV1;
+			name = "Find Cool Place";
 			productName = HW28CitiesV1;
-			productReference = 192CD98E278607580084E0C1 /* HW28CitiesV1.app */;
+			productReference = 192CD98E278607580084E0C1 /* Find Cool Place.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -173,7 +173,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 192CD989278607580084E0C1 /* Build configuration list for PBXProject "HW28CitiesV1" */;
+			buildConfigurationList = 192CD989278607580084E0C1 /* Build configuration list for PBXProject "Find Cool Place" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -186,7 +186,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				192CD98D278607580084E0C1 /* HW28CitiesV1 */,
+				192CD98D278607580084E0C1 /* Find Cool Place */,
 			);
 		};
 /* End PBXProject section */
@@ -373,9 +373,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LZN9MNW3NF;
+				DEVELOPMENT_TEAM = T59UNF3D6N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW28CitiesV1/Info.plist;
+				INFOPLIST_FILE = "Find Cool Place/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -401,9 +401,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LZN9MNW3NF;
+				DEVELOPMENT_TEAM = T59UNF3D6N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW28CitiesV1/Info.plist;
+				INFOPLIST_FILE = "Find Cool Place/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -425,7 +425,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		192CD989278607580084E0C1 /* Build configuration list for PBXProject "HW28CitiesV1" */ = {
+		192CD989278607580084E0C1 /* Build configuration list for PBXProject "Find Cool Place" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				192CD9A02786075B0084E0C1 /* Debug */,
@@ -434,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		192CD9A22786075B0084E0C1 /* Build configuration list for PBXNativeTarget "HW28CitiesV1" */ = {
+		192CD9A22786075B0084E0C1 /* Build configuration list for PBXNativeTarget "Find Cool Place" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				192CD9A32786075B0084E0C1 /* Debug */,
