@@ -24,6 +24,14 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         tableViewOutlet.dataSource = self
         tableViewOutlet.delegate = self
         searchBar.delegate = self
+        
+        print(citys.count)
+        print(сitiesSorting.count)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        categirys = delegate.getNewValues()
+        print(categirys.count)
     }
     
     //MARK: - функция сортировки по тексту из searchBar
@@ -61,13 +69,7 @@ class StartViewController: UIViewController, UITextFieldDelegate, UISearchBarDel
         self.view.endEditing(true)
      }
     
-    //MARK: - navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let cityVC = segue.destination as? CityViewController else {return}
-        guard let index = tableViewOutlet.indexPathForSelectedRow?.row else {return}
-        let city = сitiesSorting[index]
-        cityVC.city = city
-    }
+    
 }
 //MARK: - tableView
 extension StartViewController : UITableViewDataSource, UITableViewDelegate {
@@ -77,6 +79,7 @@ extension StartViewController : UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        print(indexPath.row)
         //tableView.cellForRow(at: indexPath)?.backgroundColor = UIColor.systemRed
         
     }
@@ -90,5 +93,21 @@ extension StartViewController : UITableViewDataSource, UITableViewDelegate {
         cell.backgroundColor = UIColor.systemGray4
         cell.contentConfiguration = content
         return cell
+    }
+    
+    //MARK: - navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepare(for segue")
+        guard let cityVC = segue.destination as? CityViewController else { print("destination as? CityViewController")
+            return  }
+        
+        guard let indexPath = tableViewOutlet.indexPathForSelectedRow else { print("tableViewOutlet.indexPathForSelectedRow")
+            return
+        }
+        let city = сitiesSorting[indexPath.row]
+        cityVC.city = city
+        print(city)
+        cityVC.categirys = categirys
+        print("prepare(for segue")
     }
 }

@@ -34,7 +34,7 @@
                                             <color key="backgroundColor" systemColor="systemGray4Color"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="McV-Cw-0UT" kind="show" id="KbV-Zm-JXe"/>
+                                            <segue destination="McV-Cw-0UT" kind="show" trigger="accessoryAction" id="gkP-KL-kMP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

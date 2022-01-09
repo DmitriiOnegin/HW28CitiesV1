@@ -7,9 +7,9 @@
 
 import UIKit
 
-protocol TabBarViewControllerDelegate {
-    func setNewValues(for categirys: [Categora])
-}
+//protocol TabBarViewControllerDelegate {
+//    func setNewValues(for categirys: [Categora])
+//}
 
 class CityViewController: UIViewController {
     
@@ -19,7 +19,7 @@ class CityViewController: UIViewController {
     @IBOutlet weak var foundedDateLabel: UILabel!
     @IBOutlet weak var sightsTableView: UITableView!
     
-   // var city: [City] = City.returnCityesArray()
+  //  var city: City = City.returnCityesArray().first
     var city: City!
     var categirys: [Categora] = [.theatre, .sport, .architecture, .food, .park]
     var sortedPlace: [Place] = []
@@ -85,18 +85,3 @@ class CityViewController: UIViewController {
         
         
     }
-    
-    //extension CityViewController: SettingsViewControllerDelegate {
-    //    func setNewValues(for categirys: [Categora]) {
-    //
-    //        self.categirys = categirys
-    //
-    //    }
-    //}
-    //extension CityViewController: TabBarViewControllerDelegate {
-    //    func setNewValues(for categirys: [Categora]) {
-    //
-    //        self.categirys = categirys
-    //
-    //    }
-    //}

@@ -129,8 +129,8 @@
 		199D47BA278AB3B000F26949 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				199D47AA278AB2D500F26949 /* SettingsViewController.swift */,
 				199D47A32789BA7000F26949 /* TabBarViewController.swift */,
+				199D47AA278AB2D500F26949 /* SettingsViewController.swift */,
 				199D47AE278AB2F900F26949 /* StartViewController.swift */,
 				199D47B2278AB31600F26949 /* CityViewController.swift */,
 				199D47B5278AB32B00F26949 /* PlaceViewController.swift */,

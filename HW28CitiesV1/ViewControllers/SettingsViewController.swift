@@ -28,7 +28,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        delegate.setNewValues(for: categirys)
+       
     }
 
     
@@ -55,6 +55,7 @@ class SettingsViewController: UIViewController {
             categirys.append(.park)
             
         }
+        delegate.setNewValues(for: categirys)
     }
 }
 

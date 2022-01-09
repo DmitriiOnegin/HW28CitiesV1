@@ -23,7 +23,8 @@ class TabBarViewController: UITabBarController {
             guard let startNVC = viewControllers?.first as? UINavigationController else { return }
             guard let startVC = startNVC.topViewController as? StartViewController else { return }
 
-            startVC.categirys = categirys
+            startVC.citys = citys
+          //  startVC.categirys = categirys
             print(self.categirys)
         }
     }
